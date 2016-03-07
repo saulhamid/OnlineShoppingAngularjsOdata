@@ -1,0 +1,38 @@
+﻿<link href="Admin/css/style.css" rel="stylesheet" />
+<link href="Admin/css/lines.css" rel="stylesheet" />
+<link href="Admin/css/font-awesome.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<link href="Admin/css/custom.css" rel="stylesheet" />
+
+
+    <div class=" well" ng-controller="AdminCRTL" style="margin:20%">
+        <h2> Admin Logins </h2>
+        <div class="alert alert-info" ng-hide="authenticationError">
+            Enter your username and password and click Log In to authenticate
+        </div>
+        <div class="alert alert-danger" ng-show="authenticationError">
+            Authentication Failed ({{authenticationError.status}}). Try again.
+        </div>
+        <form name="authForm" novalidate>
+            <div class="form-group">
+                <label class="input-lg">Username</label>
+                <input name="username" class="form-control input-lg" ng-model="adminname" required />
+            </div>
+            <div class="form-group">
+                <label class="input-lg">Password</label>
+                <input name="password" type="password" class="form-control input-lg" ng-model="adminpassword" required />
+
+            </div>
+            <div class="text-center">
+                <button ng-click="adminlogins(adminname, adminpassword)"
+                        ng-disabled="authForm.$invalid"
+                        class="btn btn-primary btn-lg">
+                    Log In<span class="glyphicon glyphicon-log-in"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+
+

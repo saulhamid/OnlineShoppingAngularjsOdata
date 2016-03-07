@@ -1,0 +1,46 @@
+﻿<ng-include src="'View/Partial/Navigations.html'"></ng-include>
+<div class="row well well-lg divider">
+    <div class="col-md-6 divider well">
+        <div class="col-md-1"></div>
+        <div>
+            <h2> New Customer</h2>
+            <hr />
+            <h3>Register Account</h3>
+            <div>
+                By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+            </div>
+            <hr />
+            <div>  <a class="btn btn-primary btn-lg pull-right" href="#/register">Create New Account</a></div>
+        </div>
+    </div>
+    <div class="col-md-6 divider">
+        <div class=" well" ng-controller="authCtrl">
+            <h2>Registered Customers</h2>
+            <div class="alert alert-info" ng-hide="authenticationError">
+                Enter your username and password and click Log In to authenticate
+            </div>
+            <div class="alert alert-danger" ng-show="authenticationError">
+                Authentication Failed ({{authenticationError.status}}). Try again.
+            </div>
+            <form name="authForm" novalidate>
+                <div class="form-group">
+                    <label class="input-lg">Username</label>
+                    <input name="username" class="form-control input-lg" ng-model="username" required />
+                </div>
+                <div class="form-group">
+                    <label class="input-lg">Password</label>
+                    <input name="password" type="password" class="form-control input-lg" ng-model="password" required />
+
+                </div>
+                <div class="text-center">
+                    <button ng-click="authenticate(username, password)"
+                            ng-disabled="authForm.$invalid"
+                            class="btn btn-primary btn-lg">
+                        Log In<span class="glyphicon glyphicon-log-in"></span>
+                    </button><a class="btn btn-primary btn-lg" href="#/fogetpass">Forget Password ?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

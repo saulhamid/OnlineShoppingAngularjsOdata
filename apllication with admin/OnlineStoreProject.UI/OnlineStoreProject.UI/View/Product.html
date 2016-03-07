@@ -1,0 +1,91 @@
+﻿
+<div ng-controller="productCtrl">
+
+
+    <div class="panel panel-default panel-primary">List of all Products</div><hr />
+    <!--<input type="text" placeholder="search" />-->
+    <input type="text" class="form-control" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+
+    <table border="1" style="width:100%;" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th ng-click="predicate='PId';reverse=!reverse">ID </th>
+
+                <th>Name </th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Total</th>
+
+
+            </tr>
+        </thead>
+        <tbody ng-repeat="p in products | filter:Search | orderBy: predicate: reverse">
+            <tr ng-click="edit(p)">
+                <td>{{p.ProductName}}</td>
+                <td>{{p.UnitPrice}}</td>
+                <td>{{p.Description}}</td>
+                <td>{{p.PUnitPrice}}</td>
+                <td>{{p.PImage}}</td>
+                <td>{{p.PDescription}}</td>
+                <td>{{p.PUnitPrice*p.Pqty}}</td>
+
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="edit(p)">Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="delete(p)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>{{getHead()}}</h2>
+
+    <fieldset>
+
+        <table style="width:70%; ">
+
+
+            <tr>
+                <td><label class="control-label">Name</label></td>
+                <td>
+                    <input type="text" class="form-control" name="PName" ng-model="current.ProductName" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Quantity</label></td>
+                <td>
+                    <input type="text" class="form-control" name="Pqty" ng-model="current.UnitPrice" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Unit Price</label></td>
+                <td>
+                    <input type="text" class="form-control" name="PUnitPrice" ng-model="current.PUnitPrice" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Image</label></td>
+                <td>
+                    <input type="file" class="form-control" name="PImage" ng-model="current.PImage" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Description</label></td>
+                <td>
+                    <input type="text" class="form-control" name="PDescription" ng-model="current.PDescription" />
+                </td>
+            </tr>
+
+            <tr>
+
+                <td colspan="2">
+                    <!--<button id="btnInsert">Insert</button>-->
+                    <button class="btn btn-primary" ng-hide="isEdit" ng-disabled="empfrm.$invalid" ng-click="insert()">Insert</button>
+                    <button class="btn btn-primary" ng-show="isEdit" ng-disabled="empfrm.$invalid" ng-click="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</div>
+
