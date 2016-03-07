@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/myScript/app.js"></script>
+</head>
+<body ng-controller="ModTableEmpCtrl">
+    <h3>List of all Employee</h3><hr />
+    <p>Search By Id: <input id="Text1" type="text" ng-model="Search.Id" /></p>
+    <p>Search By Name: <input id="Text1" type="text" ng-model="Search.Name" /></p>
+    <p>Search : <input id="Text1" type="text" ng-model="Search" /></p>
+    <table style="width:100%;" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th ng-click="predicate='Id';reverse=!reverse">Id </th>
+                <th>Name</th>
+                <th>Email </th>
+                <th>Salary</th>
+                <th>Date of Birth</th>
+                <th>Male</th>
+                <th>... </th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="empl in employees | filter:Search | orderBy: predicate: reverse">
+            <tr ng-click="edit(empl)">
+                <td>{{empl.Id}}</td>
+                <td>{{empl.Name}}</td>
+                <td>{{empl.Email}}</td>
+                <td>{{empl.Salary}}</td>
+                <td>{{empl.DOB|date:'yyyy/MM/dd'}}</td>
+                <td>{{empl.Male}}</td>
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="edit(empl)">Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="delete(empl)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--<h3>{{getHead()}}</h3><hr />-->
+    <fieldset>
+        <legend>{{getHead()}}</legend>
+        <table style="width:50%; border:2px red dotted;">
+
+
+            <tr>
+                <td><label class="control-label">Name</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtName" ng-model="current.Name" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Email</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtEmail" ng-model="current.Email" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Salary</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtSalary" ng-model="current.Salary" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Date of Birth</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtDOB" ng-model="current.DOB|date:'yyyy/MM/dd'" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Male</label></td>
+                <td>
+                    <input type="checkbox" class="form-control" name="chkMale" ng-model="current.Male" />
+                </td>
+            </tr>
+            <tr>
+
+                <td colspan="2">
+                    <!--<button id="btnInsert">Insert</button>-->
+                    <button class="btn btn-primary" ng-hide="isEdit" ng-disabled="empfrm.$invalid" ng-click="insert()">Insert</button>
+                    <button class="btn btn-primary" ng-show="isEdit" ng-disabled="empfrm.$invalid" ng-click="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

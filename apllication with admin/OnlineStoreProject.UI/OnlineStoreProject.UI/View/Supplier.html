@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title></title>
+
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/WebShopAngularScript/Suppliers.js"></script>
+</head>
+<body ng-controller="supplierCtrl">
+
+    <h>List of all Suppliers</h><hr />
+    <table>
+        <tr>
+            <td>
+                Search By Id:
+            </td>
+            <td><input id="Text1" type="text" ng-model="Search.SuplierId" /></td>
+        </tr>
+        <tr>
+            <td>Search By Name: </td>
+            <td><input id="Text1" type="text" ng-model="Search.SuplierName" /></td>
+        </tr>
+        <tr>
+            <td>
+                Search :
+            </td>
+            <td>
+                <input id="Text1" type="text" ng-model="Search" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" style="width:100%;" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th ng-click="predicate='SuplierId';reverse=!reverse">ID</th>
+
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Mail </th>
+                <th>Phone</th>
+                
+           
+
+            </tr>
+        </thead>
+        <tbody ng-repeat="c in suppliers | filter:Search | orderBy: predicate: reverse">
+            <tr ng-click="edit(c)">
+                <td>{{c.SuplierId}}</td>
+                <td>{{c.SuplierName}}</td>
+                <td>{{c.Address}}</td>
+                <td>{{c.SuplierCity}}</td>
+                <td>{{c.SuplierCountry}}</td>
+                <td>{{c.SuplierMail}}</td>
+                <td>{{c.SuplierPhone}}</td>
+           
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="edit(c)">Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="delete(c)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>{{getHead()}}</h2>
+    <fieldset>
+        <!-- <legend>{{getHead()}}</legend>-->
+        <table style="width:70%; ">
+
+
+            <tr>
+                <td><label class="control-label">Name</label></td>
+                <td>
+                    <input type="text" class="form-control" name="SuplierName" ng-model="current.SuplierName" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Address</label></td>
+                <td>
+                    <input type="text" class="form-control" name="Address" ng-model="current.Address" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">City</label></td>
+                <td>
+                    <input type="text" class="form-control" name="SuplierCity" ng-model="current.SuplierCity" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Country</label></td>
+                <td>
+                    <input type="text" class="form-control" name="SuplierCountry" ng-model="current.SuplierCountry" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Mail</label></td>
+                <td>
+                    <input type="text" class="form-control" name="SuplierMail" ng-model="current.SuplierMail" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Phone</label></td>
+                <td>
+                    <input type="text" class="form-control" name="SuplierPhone" ng-model="current.SuplierPhone" />
+                </td>
+            </tr>
+           
+            <tr>
+
+                <td colspan="2">
+                  
+                    <button class="btn btn-primary" ng-hide="isEdit" ng-disabled="empfrm.$invalid" ng-click="insert()">Insert</button>
+                    <button class="btn btn-primary" ng-show="isEdit" ng-disabled="empfrm.$invalid" ng-click="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

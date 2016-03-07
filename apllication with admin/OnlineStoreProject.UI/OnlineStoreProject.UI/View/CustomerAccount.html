@@ -1,0 +1,129 @@
+﻿<ng-include src="'View/Partial/Navigations.html'"></ng-include>
+<div class="row" ng-controller="customerCtrl">
+    <div class="col-md-1"></div>
+    <div class="col-md-8">
+        <div class="container">
+            <h2>MY PROFILE</h2>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#cus1">Home</a></li>
+                <li><a data-toggle="tab" href="#cus2">MY ORDERS</a></li>
+                <li><a data-toggle="tab" href="#cus3">Edit YOUR ACCOUNT</a></li>
+            </ul>
+            <div class="tab-content" ng-repeat="item in CustomerDetail">
+                <div id="cus1" class="tab-pane fade in active" >
+                    <h3>MY ACCOUNT</h3>
+                    <div class="well">
+                        <label> Name : <b>{{item.CustomerName}}</b></label>
+                    </div>
+                    <div class="well">
+                        <label> Shipping Address : {{item.CustomerAddress}}</label>
+                    </div>
+                    <div class="well">
+                        <label> Mobile Number : {{item.CustomerMobile}}</label>
+                    </div>
+                    <div class="well">
+                        <label> City : {{item.CustomerCity}}</label>
+                    </div>
+                    <div class="well">
+                        <label> Country : {{item.CustomerCountry}}</label>
+                    </div>
+                    <div class="well">
+                        <label> Email : {{item.CustomerEmail}}</label>
+                    </div>
+                </div>
+                <div id="cus2" class="tab-pane fade">
+                    <h3>MY ORDERS</h3>
+                    <table class="table table-bordered table-responsive table-striped">
+                        <tr>
+                            <th>Invoice Number</th>
+                            <th>Product Name</th>
+                            <th>Order Date </th>
+                            <th>Product Quantity</th>
+                            <th>Product Size</th>
+                            <th>Product Total Price</th>
+                        </tr>
+                        <tr ng-repeat="item in CustomerOrders">
+                            <td>{{item.InvoiceID}}</td>
+                            <td>{{item.OrderItems}}</td>
+                            <td>{{item.OrderDate}}</td>
+                            <td>{{item.OrderQty}}</td>
+                            <td>{{item.ProductSize}}</td>
+                            <td>{{item.OrderAmount}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="cus3" class="tab-pane fade">
+                    <h3>EDIT YOUR ACCOUNT</h3>
+                    <div class="well well-lg">
+                        <form  class="form-horizontal" ng-repeat="item in CustomerDetail">
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">Fulll Name :</label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control input-lg" name="txtName" ng-model="item.CustomerName" required />
+                                    <span class="error" ng-show="item.CustomerName.$error.required">
+                                        Please enter a customer name
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">Shipping Addresss : </label>
+                                <div class="col-xs-5">
+                                    <textarea rows="3" class="form-control input-lg" name="txtAddress" ng-model="item.CustomerAddress"></textarea>
+                                    <span class="error" ng-show="item.CustomerAddress.$error.required">
+                                        Please enter a customer CustomerAddress
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">Mobile Number :</label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control input-lg" name="txtphone" ng-model="item.CustomerMobile" />
+                                    <span class="error" ng-show="item.CustomerAddress.$error.required">
+                                        Please enter a CustomerMobile
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">City :</label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control input-lg" name="txtCity" ng-model="item.CustomerCity" />
+                                    <span class="error" ng-show="item.CustomerCity.$error.required">
+                                        Please enter a customer CustomerCity
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">Country : </label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control input-lg" name=" txtcountry" ng-model="item.CustomerCountry" />
+                                    <span class="error" ng-show="item.CustomerCountry.$error.required">
+                                        Please enter a customer CustomerCountry
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label input-lg">Mail Address :</label>
+                                <div class="col-xs-5">
+                                    <input type="text" class="form-control input-lg" name=" txtmail" ng-model="item.CustomerEmail" required />
+                                    <span class="error" ng-show="item.CustomerEmail.$error.required">
+                                        Please enter a customer CustomerEmail
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="">
+                                    <button class="btn btn-primary btn-lg"  ng-disabled="empfrm.$invalid" ng-click="Update(item)">Update</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>

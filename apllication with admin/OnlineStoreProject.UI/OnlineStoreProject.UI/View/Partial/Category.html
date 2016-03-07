@@ -1,0 +1,23 @@
+﻿<div class="row">
+<div class="col-sm-12">
+    <button class="navbar-toggle btn-block btn-primary" data-toggle="collapse" data-target=".nav-collapse">
+        <span style="cursor:pointer" ng-click="selectCategory()" class=" active nav  navbar-nav btn-block">
+            <span class="glyphicon glyphicon-list-alt active-icon "></span> Category
+        </span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+</div>
+<div class="list-group active dropdown center-block  collapse navbar-collapse nav-collapse" style="width:100%">
+    <a href="" ng-click="selectCategory()" class="list-group-item active visible-md nav  navbar-nav" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-list-alt active-icon "></span>Category<span class="caret"></span>
+    </a>
+    <div class="dropdown-menu  col-md-8 ">
+        <a href="#/search" ng-repeat="item in productCategory"
+           ng-click="selectCategory(item.Category)" ng-class="getCategoryClass(item.Category)" class="nav  navbar-nav list-group-item">
+            {{item.Category}}<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+        </a>
+    </div>
+</div>

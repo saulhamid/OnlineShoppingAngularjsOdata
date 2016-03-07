@@ -1,0 +1,108 @@
+﻿
+<ng-include src="'View/Partial/Navigations.html'"></ng-include>
+<div ng-controller="customerCtrl">
+    <div class="well well-lg">
+        <div class="alert alert-danger" ng-show="current.error">
+            Error : {{current.error.status}}
+        </div>
+        <form id="loginForm" name="custform" role="form" class="form-horizontal" ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+                <label for="inputName" class="col-xs-3 control-label input-lg">Full Name :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtName.$invalid && (custform.txtName.$dirty || submitted)}">
+                    <input type="text" id="inputName" class="form-control input-lg" placeholder="Full Name"
+                           ng-maxlength="40" name="txtName" ng-minlength="3" ng-model="current.CustomerName" required />
+                    <p ng-show="custform.txtName.$error.required && (custform.txtName.$dirty || submitted)" class="help-block">You Full name is required.</p>
+                    <p ng-show="custform.txtName.$error.minlength && (custform.txtName.$dirty || submitted)" class="help-block">Full Name is too short.</p>
+                    <p ng-show="custform.txtName.$error.maxlength && (custform.txtName.$dirty || submitted)" class="help-block">Full Name is too long.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Shipping Addresss : </label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtAddress.$invalid && (userForm.username.$dirty || submitted)}">
+                    <textarea rows="3" class="form-control input-lg"
+                              name="txtAddress" ng-model="current.CustomerAddress" ng-minlength="30" maxlength="500"></textarea>
+
+                    <p ng-show="custform.txtAddress.$error.required && (custform.txtAddress.$dirty || submitted)" class="help-block">Your Address is required.</p>
+                    <p ng-show="custform.txtAddress.$error.minlength && (custform.txtAddress.$dirty || submitted)" class="help-block">Address is too short.</p>
+                    <p ng-show="custform.txtAddress.$error.maxlength && (custform.txtAddress.$dirty || submitted)" class="help-block">Address is too long.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Mobile Number :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.username.$invalid && (custform.txtphone.$dirty || submitted)}">
+                    <input type="text" placeholder="Enter Mobile Number" class="form-control input-lg" ng-pattern="\d*" ng-minlength="5" maxlength="11" name="txtphone" ng-model="current.CustomerMobile" />
+                    <p ng-show="custform.txtphone.$error.required && (custform.txtphone.$dirty || submitted)" class="help-block">Your Mobile Number is required.</p>
+                    <p ng-show="custform.txtphone.$error.minlength && (custform.txtphone.$dirty || submitted)" class="help-block">Mobile Number is too short.</p>
+                    <p ng-show="custform.txtphone.$error.maxlength && (custform.txtphone.$dirty || submitted)" class="help-block">Mobile Number is too long.</p>
+                    <p ng-show="custform.txtphone.$error.pattern && (custform.txtphone.$dirty || submitted)" class="help-block">Please Enter Valid Phone Number</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Country :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtCountry.$invalid && (custform.txtCountry.$dirty || submitted)}">
+                    <select name="txtCountry" class="form-control input-lg"
+                            ng-model="current.CustomerCountry"
+                            ng-options="CustomerCountry.CountryId as CustomerCountry.Name for CustomerCountry in countryList"
+                            ng-required="true">
+                        <option value=''>---Select Country---</option>
+                    </select>
+                    <p ng-show="custform.txtCountry.$error.required && (custform.txtCountry.$dirty || submitted)" class="help-block">Select Country</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">City :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtCity.$invalid && (custform.txtCity.$dirty || submitted)}">
+                    <select name="txtCity" class="form-control input-lg"
+                            ng-model="current.CustomerCity"
+                            ng-options="CustomerCity.CityId as CustomerCity.Name for CustomerCity in cityList"
+                            ng-required="true">
+                        <option value=''>----Select City---</option>
+                    </select>
+                    <span class="" ng-messages="custform.txtCity.$error"></span>
+                    <p ng-show="custform.txtCity.$error.required && (custform.txtCity.$dirty || submitted)" class="help-block">Select City</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">EMail Address :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtMail.$invalid && (userForm.txtMail.$dirty || submitted)}">
+                    <input type="email" placeholder="Enter Your Valid Email" class="form-control input-lg" name="txtMail"
+                           ng-model="current.CustomerEmail" required />
+                    <p ng-show="custform.txtMail.$error.required && (custform.txtMail.$dirty || submitted)" class="help-block">Email is required.</p>
+                    <p ng-show="custform.txtMail.$error.email && (custform.txtMail.$dirty || submitted)" class="help-block">Enter a valid email.</p>
+                    <p ng-show="custform.txtMail.$error.uniqueEmail">Email is not unique.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Password :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.txtPassword.$invalid && (custform.txtPassword.$dirty || submitted)}">
+                    <input type="password" placeholder="Enter your Password" class="form-control input-lg" name="txtPassword" ng-model="current.CustomerPassword" required />
+                    <p ng-show="custform.txtPassword.$error.required && (custform.txtPassword.$dirty || submitted)" class="help-block">Password is required.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Confirm Password :</label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.confirmPassword.$invalid && (custform.ContPassword.$dirty || submitted)}">
+                    <input type="Password" name="confirmPassword" class="form-control input-lg" ng-model="confirmPassword" placeholder="Confirm Your Password" ng-compare="txtPassword" ng-required="true">
+                    <p ng-show="custform.confirmPassword.$error.required && (custform.confirmPassword.$dirty || submitted)" class="help-block">Your confirm password is required.</p>
+                    <p ng-show="custform.confirmPassword.$error.compare && (custform.confirmPassword.$dirty || submitted)" class="help-block">Confirm password doesnot match.</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-3 control-label input-lg">Accept Terms & Conditions </label>
+                <div class="col-xs-5" ng-class="{ 'has-error' : custform.terms.$invalid && (custform.terms.$dirty || submitted)}">
+                    <input type="checkbox" placeholder="Entet Your Password Again" class="form-control input-lg" name="terms" required />
+                    <p ng-show="custform.terms.$error.required && (custform.terms.$dirty || submitted)" class="help-block">Your confirm password is required.</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-9 col-xs-offset-3">
+                    <button class="btn btn-primary" ng-disabled="custform.$invalid" ng-click="insert(current)">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

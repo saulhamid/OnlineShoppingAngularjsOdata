@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+   
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/WebShopAngularScript/Category.js"></script>
+</head>
+<body ng-controller="categoryCtrl">
+
+    <h>List of all Category</h><hr />
+    <table>
+        <tr>
+            <td>
+                Search By Id:
+            </td>
+            <td><input id="Text1" type="text" ng-model="Search.CatId" /></td>
+        </tr>
+        <tr>
+            <td>Search By Category: </td>
+            <td><input id="Text1" type="text" ng-model="Search.PCategory" /></td>
+        </tr>
+        <tr>
+            <td>
+                Search :
+            </td>
+            <td>
+                <input id="Text1" type="text" ng-model="Search" />
+            </td>
+        </tr>
+    </table>
+
+    <table border="1" style="width:100%;" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th ng-click="predicate='CatId';reverse=!reverse">ID</th>
+
+                <th>PCategory </th>
+           
+
+            </tr>
+        </thead>
+        <tbody ng-repeat="c in categories | filter:Search | orderBy: predicate: reverse">
+            <tr ng-click="edit(c)">
+                <td>{{c.CatId}}</td>
+                <td>{{c.PCategory}}</td>
+              
+                <td>
+                    <button type="button" class="btn btn-default" ng-click="edit(c)">Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="delete(c)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>{{getHead()}}</h2>
+    <fieldset>
+    
+        <table style="width:70%;">
+
+
+            <tr>
+                <td><label class="control-label">Category</label></td>
+                <td>
+                    <input type="text" class="form-control" name="PCategory" ng-model="current.PCategory" required />
+                </td>
+            </tr>
+           
+          
+            <tr>
+
+                <td colspan="2">
+                    <!--<button id="btnInsert">Insert</button>-->
+                    <button class="btn btn-primary" ng-hide="isEdit" ng-disabled="empfrm.$invalid" ng-click="insert()">Insert</button>
+                    <button class="btn btn-primary" ng-show="isEdit" ng-disabled="empfrm.$invalid" ng-click="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

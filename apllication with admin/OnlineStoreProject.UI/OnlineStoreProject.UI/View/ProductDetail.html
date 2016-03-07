@@ -1,0 +1,117 @@
+﻿<link href="../magicthumb/magicthumb.css" rel="stylesheet" />
+<script src="../magicthumb/magicthumb.js"></script>
+   <ng-include src="'View/Partial/Navigations.html'"></ng-include>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wrap">
+                <div class="col-md-6">
+                    <h2>Image : </h2>
+                <div class="thumbnail">
+                    <a href="Content/images/p{{currentProduct.ProductID}}.jpg"  class="MagicThumb">
+                        <img src="Content/images/p{{currentProduct.ProductID}}.jpg" class="img-responsive img-thumbnail" />
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="alert alert-info ">{{currentProduct.ProductName}}</h2>
+                    <div class="bg-warning alert alert-danger">{{currentProduct.UnitPrice | currency:'৳'}}</div>
+                    <div class="label label-info" style="font-size:medium">Description :</div>
+                    <p>
+                        {{currentProduct.Description}}                      
+                    </p>
+                    <hr />
+                    <div class=" well">
+                        <ul class="nav navbar-nav">
+                            <li>Quantity</li>
+                            <li> <input type="number" size="2" ng-maxlength="2" max="{{currentProduct.ProductQty}}" style="width:50px" ng-model="incrementvalue" ng-disabled="incrementvalue >= currentProduct.ProductQty && incrementvalue >0" disabled="disabled"/></li>
+                            <li><increment value="incrementvalue"  /></li>
+                            <li><decrement value="incrementvalue" ng-hide="incrementvalue < 1" /></li>
+                        </ul>
+                        Size:<select ng-model="currentProduct.size">
+                                 <option value="Large">Large</option>
+                                 <option selected="selected" value="Medium">Medium</option>
+                                 <option value="small">small</option>
+                                 <option value="Large">Large</option>
+                        </select>
+                        Availablity : <span class="badge"> {{currentProduct.ProductQty - incrementvalue}}</span>
+                    </div>
+                    <div>
+                        Total Cost: {{currentProduct.UnitPrice | currency:'TK'}} + {{currentProduct.UnitPrice * .06 | currency:'৳'}}(including shipping):6% * {{incrementvalue }}  = {{currentProduct.UnitPrice * .06 + currentProduct.UnitPrice * incrementvalue | currency:'৳'}} (Depend Your Location)
+                    </div>
+                    <hr />
+                    <div class="btn-group-lg">
+                        <a href="#/checkout" ng-click="addProductToCartDetail(currentProduct,incrementvalue)" class=" label-warning btn-lg">
+                            <span class="glyphicon glyphicon-list-alt"></span> Buy Now
+                        </a>
+                        <button class=" btn-danger btn-lg" style="text-decoration:none" ng-click="addProductToCartDetail(currentProduct,incrementvalue)" ng-disabled="incrementvalue <= 0">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                        </button>
+                    </div>
+                </div>
+             </div>
+            <div class="col-md-1"></div>
+               </div>
+        </div>   
+    <h3 class="alert alert-success"> Other Products in the same category</h3>
+<marquee onmouseover="this.stop()" onmouseout="this.start()">
+    <div ng-repeat="item in producttop10 |filter:categoryFilterFn" style="min-height:50px">
+        <div class="col-sm-3 col-md-2 prolist prohover">
+            <a href="#/ProductDetail" data-toggle="" ng-click="productdetail(item)">
+                <img src="Content/images/p{{item.ProductID}}.jpg" class="img-responsive" />
+                <div class="caption">
+                </div>
+            </a>
+            <span class="btn btn-default btn-primary" ng-click="addProductToCart(item)" role="button"><span class="glyphicon glyphicon-shopping-cart "></span> Add Cart</span>
+        </div>
+    </div>
+</marquee>
+<hr />
+<div  class="row well">
+    <div class="container col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#menu1">Description</a></li>
+            <li><a data-toggle="tab" href="#menu2">Condition</a></li>
+            <li><a data-toggle="tab" href="#menu3">Return</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane fade in active">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Condition</h3>
+                <ul> Select number of product you want to buy.
+                    <li>Click on Buy Now button.</li>
+                    <li>If you are a new user, please click on Sign Up. Sign up providing required information.</li>
+                    <li>Use your user name & password if you are a registered customer.</li>
+                    <li>Choose your payment (Check out) method.</li>
+                    <li>Follow required instruction based on payment method.</li>
+                    <li>If feel difficulty call us: 01793-153934.</li></ul>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Return</h3>
+                <p style="text-align:center" class="wrap">Can I return this product?
+You can return this product for a refund, within 7 days after receiving your original order.
+
+If you would like a different size or color, please return your unwanted product and place a new order.
+
+How to return this product?<br />
+
+You can request a return by calling Customer Service at 0-961-00-961-11<br />
+
+What are the required conditions?<br />
+Please see below conditions for your return request to be accepted:<br />
+- product is still in its original packaging<br />
+- product is in its original condition and unused<br />
+- product is not damaged<br />
+- product label is still attached<br />
+- If examination conclusive and conditions respected, we will proceed to refund within maximum 14 business days post retrieval product.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+          
+

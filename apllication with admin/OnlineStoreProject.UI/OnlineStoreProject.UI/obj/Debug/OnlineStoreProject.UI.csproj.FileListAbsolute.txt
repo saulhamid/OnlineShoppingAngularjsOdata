@@ -1,0 +1,60 @@
+i:\users\snaker\documents\visual studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+i:\users\snaker\documents\visual studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+i:\users\snaker\documents\visual studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+i:\users\snaker\documents\visual studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+i:\users\snaker\documents\visual studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+I:\Users\Snaker\Documents\Visual Studio 2013\Projects\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+H:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+J:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+D:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+L:\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+C:\Users\Round-24\Desktop\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+C:\Users\Md. Mamunur Roshid\Downloads\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+H:\project\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+C:\Users\Spicy\Desktop\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll.config
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.dll
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\bin\OnlineStoreProject.UI.pdb
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.csprojResolveAssemblyReference.cache
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.dll
+H:\project\Final 1\OnlineProject\OnlineProject\OnlineProject\apllication with admin\OnlineStoreProject.UI\OnlineStoreProject.UI\obj\Debug\OnlineStoreProject.UI.pdb
